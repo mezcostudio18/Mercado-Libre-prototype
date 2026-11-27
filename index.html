@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portátiles | Mercado Libre — prototipo v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap">
+<link rel="stylesheet" href="css/styles-v2.css?v=1">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr">
+  <div class="hdr-row">
+    <a class="logo" href="#" aria-label="Mercado Libre"><img src="imagenes/ML%20logo.png" width="171" height="56" alt="Mercado Libre"></a>
+    <div class="search">
+      <span class="search-q">laptop</span>
+      <span class="search-s">en todo Mercado Libre</span>
+    </div>
+    <div class="meli"><span class="meli-pill">meli<b>+</b></span><span class="meli-t">DESDE <b>$9.900</b><small>/MES</small></span></div>
+  </div>
+  <nav class="hdr-nav">
+    <div class="ship">Enviar a<br>Ingresa tu ubicación</div>
+    <div class="nav-l"><a>Categorías</a><a>Ofertas</a><a>Cupones</a><a>Supermercado</a><a>Moda</a><a>Vender</a><a>Ayuda / PQR</a></div>
+    <div class="nav-r">
+      <span class="user"><i class="av">OG</i>OSCAR DARIO<svg class="chev-s" width="7" height="4" viewBox="0 0 7 4"><path d="M.5.5 3.5 3.5 6.5.5" fill="none" stroke="#333" stroke-width="1.1"/></svg></span>
+      <a>Mis compras</a>
+      <span class="fav">Favoritos<svg class="chev-s" width="7" height="4" viewBox="0 0 7 4"><path d="M.5.5 3.5 3.5 6.5.5" fill="none" stroke="#333" stroke-width="1.1"/></svg></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-label="Carrito"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3.5h3L8 15h10.5l1.8-8H6.3"/></svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-label="Notificaciones"><path d="M6 17V11a6 6 0 0 1 12 0v6l1.5 2h-15z"/><path d="M10 21.5h4"/></svg>
+    </div>
+  </nav>
+</header>
+
+<div class="page">
+
+  <!-- ============ BÚSQUEDAS RELACIONADAS (no sticky) ============ -->
+  <nav class="related" aria-label="Búsquedas relacionadas">
+    <p><b>Búsquedas relacionadas:</b> <a href="#">laptop hp</a> - <a href="#">laptop hp i3</a> - <a href="#">laptop 64gb ram</a> - <a href="#">skin para laptop</a> - <a href="#">notebook hp 14 d028la</a> - <a href="#">mesa de cama para laptop</a></p>
+  </nav>
+
+  <!-- ============ BARRA STICKY (Frame 132 + Frame 125) ============ -->
+  <div class="topbar" id="topbar">
+    <div class="tb-count">
+      <p class="count"><b>+9.000</b> <span>resultados</span></p>
+      <button class="clear-all" id="clearAll" type="button">Limpiar todo</button>
+    </div>
+    <div class="tb-chips-wrap">
+      <div class="tb-chips" id="chips" aria-label="Filtros aplicados"></div>
+      <div class="tb-fade" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="layout">
+    <!-- ============ FILTROS ============ -->
+    <aside class="sidebar" id="sidebar" aria-label="Filtros"></aside>
+
+    <!-- ============ RESULTADOS ============ -->
+    <main class="results">
+      <div class="res-head">
+        <p class="crumb"><b>Categoría:</b> <span>Computación &gt; Portátiles y Accesorios &gt; Portátiles</span></p>
+        <p class="sort"><b>Ordenar por</b> Más relevante
+          <svg width="7" height="4" viewBox="0 0 7 4"><path d="M.5.5 3.5 3.5 6.5.5" fill="none" stroke="#333" stroke-width="1.1"/></svg></p>
+      </div>
+      <div class="grid" id="grid"></div>
+    </main>
+  </div>
+</div>
+
+<!-- elementos flotantes -->
+<div class="dd" id="dd" role="listbox" hidden></div>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+<div class="toast" id="toast" role="alert" hidden></div>
+
+<script src="js/app-v2.js?v=1"></script>
+</body>
+</html>
